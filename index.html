@@ -8,19 +8,23 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Github for Teams</title>
 </head>
-<body> 
-    <main class="h-screen bg-gray-300 text-purple-700 flex justify-center items-center">
-        <div>
-            <button class="p-4 rounded bg-purple-200 uppercase hover:bg-purple-400 hover:text-white transition-colors">   
-                click me
-            </button>
-        </div>
+<body class="h-screen bg-gray-300 text-purple-700 flex justify-center items-center flex-col">
 
-        <div class="h-screen bg-blue-300 flex justify-center items-center invisible">
-            <button class="p-4 rounded bg-blue-500 uppercase hover:bg-blue-700 transition-colors">
-                click me
-            </button>
-        </div>
-    </main>
+    <button 
+        onclick={OpenModal()}
+        id="open_modal" 
+        class="uppercase p-4 bg-blue-200 text-blue-800 rounded hover:bg-blue-800 hover:text-blue-200 transition-colors">
+        click me
+    </button>
+
+    <div class="wrapper_modal invisible fixed bg-purple-100 w-screen h-screen flex flex-col justify-center items-center">
+        <button
+            onclick={ClosedModal()} 
+            class="closed_modal p-4 rounded bg-purple-300 text-purple-600 uppercase hover:bg-purple-600 hover:text-white transition-colors"> 
+            click me to
+        </button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
