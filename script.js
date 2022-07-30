@@ -36,4 +36,4 @@ async function fetchApi() {
         </ol>`
     })
 }
-myApi.textContent = fetchApi()
+console.log(fetchApi())
