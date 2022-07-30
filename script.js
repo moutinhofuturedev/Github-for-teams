@@ -8,8 +8,8 @@ function OpenModal() {
     secondary.classList.remove('invisible')
 }
 
-buttonClosed.addEventListener('click', CloseModal)
-function CloseModal() {
+buttonClosed.addEventListener('click', ClosedModal)
+function ClosedModal() {
     secondary.classList.add('invisible')
 }
 
